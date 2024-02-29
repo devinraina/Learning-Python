@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 1</title>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+    {% if data.title %}
+        <p method="post">Hello {{data.title}}! You are logged in.</p>
+        <a href="/" method="post">Log out</a><br>
+        <form action="/update" method='POST'>
+            Title: <input type="text" name="title" value={{data.title}}><br>
+            Content: <textarea rows="4" cols="50" name="content">{{data.content}}</textarea><br>
+            <input type="submit" value="Update">
+        </form>  
+    {% else %}
+        <p>You are not logged in.</p>
+        <a href="/login">Login</a> /  
+        <a href="/register">Register</a> 
+    {% endif %}
+    
+    {% if message %}
+        <div style="color:red;">{{message}}</div>
+    {% endif %}
+</body>
+</html>
