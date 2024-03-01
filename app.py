@@ -1,15 +1,5 @@
 
 def fibonacci_loop(n):
-  """
-  Generates the Fibonacci series up to a given number using a loop.
-
-  Args:
-      n: The number up to which the series should be generated.
-
-  Returns:
-      A list containing the Fibonacci numbers up to n.
-  """
-
   if n < 0:
     raise ValueError("n must be non-negative")
 

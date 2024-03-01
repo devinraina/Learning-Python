@@ -1,5 +1,5 @@
 import re 
-  
+#regex --> regular expression
   
 match = re.search(r'portal', 'GeeksforGeeks: A computer science for geeks portal') 
 print(match) 
